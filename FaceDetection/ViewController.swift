@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		guard let image = UIImage(named: "sample04") else { return }
+		guard let image = UIImage(named: "sample00") else { return }
 		let imageView = UIImageView(image: image)
 		
 		let scaledHeight = view.frame.width / image.size.width * image.size.height

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qx7-pn-oZt">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,9 +13,9 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -19,6 +23,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="223" y="78"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="6Vl-L1-wvm">
+            <objects>
+                <viewController id="gQL-zf-cpO" customClass="CameraViewController" customModule="FaceDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i66-bi-MCy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzD-AQ-gwZ">
+                                <rect key="frame" x="149" y="728" width="76" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jDM-GV-zRR"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhotoWithSender:" destination="gQL-zf-cpO" eventType="touchUpInside" id="8Lj-Ud-d48"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K7G-gE-KYN">
+                                <rect key="frame" x="0.0" y="44" width="375" height="684"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K7G-gE-KYN" firstAttribute="leading" secondItem="TRr-Es-akY" secondAttribute="leading" id="1pb-m9-PCm"/>
+                            <constraint firstItem="TzD-AQ-gwZ" firstAttribute="top" secondItem="K7G-gE-KYN" secondAttribute="bottom" id="4VM-ac-HuQ"/>
+                            <constraint firstItem="TzD-AQ-gwZ" firstAttribute="centerX" secondItem="i66-bi-MCy" secondAttribute="centerX" id="5jA-iP-dz3"/>
+                            <constraint firstItem="TzD-AQ-gwZ" firstAttribute="bottom" secondItem="TRr-Es-akY" secondAttribute="bottom" id="8Yz-zi-3hX"/>
+                            <constraint firstItem="TRr-Es-akY" firstAttribute="trailing" secondItem="K7G-gE-KYN" secondAttribute="trailing" id="Lbo-Dn-Wsu"/>
+                            <constraint firstItem="K7G-gE-KYN" firstAttribute="top" secondItem="TRr-Es-akY" secondAttribute="top" id="mF5-cf-ba7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TRr-Es-akY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="K7G-gE-KYN" id="nfR-cI-cvF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dnd-h5-KUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="78"/>
+        </scene>
+        <!--Real Time Face DetectionVC-->
+        <scene sceneID="e2y-vB-XEC">
+            <objects>
+                <viewController id="qx7-pn-oZt" customClass="RealTimeFaceDetectionVC" customModule="FaceDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wal-Y1-sZr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UI4-wZ-EfQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Tv-78-hth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1756" y="78"/>
         </scene>
     </scenes>
 </document>

@@ -12,6 +12,8 @@
 		EF52F0842096C23500506E26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF52F0822096C23500506E26 /* Main.storyboard */; };
 		EF52F0862096C23700506E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF52F0852096C23700506E26 /* Assets.xcassets */; };
 		EF52F0892096C23700506E26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF52F0872096C23700506E26 /* LaunchScreen.storyboard */; };
+		EF52F0912096D3A800506E26 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52F0902096D3A800506E26 /* CameraViewController.swift */; };
+		EF52F0932096EA4100506E26 /* RealTimeFaceDetectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52F0922096EA4100506E26 /* RealTimeFaceDetectionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		EF52F0852096C23700506E26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF52F0882096C23700506E26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF52F08A2096C23700506E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF52F0902096D3A800506E26 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		EF52F0922096EA4100506E26 /* RealTimeFaceDetectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeFaceDetectionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				EF52F07E2096C23500506E26 /* AppDelegate.swift */,
 				EF52F0802096C23500506E26 /* ViewController.swift */,
+				EF52F0902096D3A800506E26 /* CameraViewController.swift */,
+				EF52F0922096EA4100506E26 /* RealTimeFaceDetectionVC.swift */,
 				EF52F0822096C23500506E26 /* Main.storyboard */,
 				EF52F0852096C23700506E26 /* Assets.xcassets */,
 				EF52F0872096C23700506E26 /* LaunchScreen.storyboard */,
@@ -137,6 +143,8 @@
 			files = (
 				EF52F0812096C23500506E26 /* ViewController.swift in Sources */,
 				EF52F07F2096C23500506E26 /* AppDelegate.swift in Sources */,
+				EF52F0932096EA4100506E26 /* RealTimeFaceDetectionVC.swift in Sources */,
+				EF52F0912096D3A800506E26 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
